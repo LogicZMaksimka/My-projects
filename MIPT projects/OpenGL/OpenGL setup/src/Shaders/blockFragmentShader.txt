@@ -1,0 +1,12 @@
+#version 450 core
+
+in vec3 vertexColor;
+in vec2 texturePos;
+
+out vec4 resultColor;
+
+uniform sampler2D curTexture;
+
+void main(){
+	resultColor = texture(curTexture, vec2(texturePos.x, 1.0f - texturePos.y));
+}

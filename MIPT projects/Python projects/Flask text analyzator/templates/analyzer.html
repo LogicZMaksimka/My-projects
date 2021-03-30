@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <title>Best text analyzer ever</title>
+      <style>
+          textarea {
+            padding: 10px;
+            vertical-align: top;
+          }
+          textarea:focus {
+            outline-style: solid;
+            outline-width: 2px;
+          }
+      </style>
+   </head>
+   <body>
+      <form action="/analyzeText" method="POST" enctype=multipart/form-data>
+         Type count of words you want <input type="number" name="words_count" min="1" value="{{ start_words_count }}"/><br>
+         Analyze text in lowercase <input type="checkbox" name="in_lowercase"/><br>
+         Upload your file <input type="file" id="file" name="file"/><br>
+         <textarea name="input_text" minlength="1" cols="80" style='max-height: 300px'>{{ start_text }}</textarea><br>
+         <button type="submit">Analyze text</button>
+      </form>
+      <table border="1">
+         <tr>
+            <td>Words count </td>
+            <td>{{ words_count }}</td>
+         </tr>
+         <tr>
+            <td>Punctuation marks count </td>
+            <td>{{ punctuation_marks_count }}</td>
+         </tr>
+      <table/>
+      <table border="1">
+         <tr>
+            <td>Words frequencies<br>
+            {% for word, frequency in sorted_words %}
+               <div>{{ word }} : {{ frequency}}</div>
+               <br>
+            {% endfor %}
+            </td>
+         </tr>
+      </table>
+
+   </body>
+</html>

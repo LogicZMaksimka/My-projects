@@ -1,0 +1,16 @@
+''cicada
+""3
+''''3
+"''''"0
+"'"'""'"'"1
+()
+{}
+[]
+(()(()))([]{()})
+('')
+'()'
+('["(){''}[]"]')
+((I am) a ((maaaaad)) scientiiiisto its so([cool]{(***)}))
+('["(){'tutu'}[ru]"]')
+'("('anime' and)" "(python (is) my life)" but (currently [I have no time] {for the first one()}) "()" )'
+({['" [(okey)'dokey'{}]  ("''") ( [{"see"you}]{'space cowboy'})"']})
